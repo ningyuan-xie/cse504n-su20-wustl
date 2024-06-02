@@ -1,0 +1,10 @@
+3 3
+red Xs X 0 0
+red Xs X 0 4
+red Xs X 5 1
+Brook Xs X 1 2
+Green Xs X 2 2
+blue Os O 0 1 
+blue Os O 1 0 
+blue Os O 2 0 
+blue Os O 2 2 

@@ -1,0 +1,13 @@
+hello, this is my testing file.
+	I am trying to complete lab-1.
+
+
+
+C++ is very fun to learn!
+
+
+I am going to sleep now. It's too late!
+
+123
+456
+789
