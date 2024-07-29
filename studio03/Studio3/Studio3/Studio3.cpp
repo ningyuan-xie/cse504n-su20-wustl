@@ -6,8 +6,8 @@ using namespace std;
 
 int main(int argc, char* argv[])
 
-// int argc: This stands for "argument count" and represents the number of command-line arguments passed to the program when it is executed.
-// char* argv[]: This stands for "argument vector" and is an array of strings (or array of character pointers) containing the command-line arguments themselves. 
+// int argc: "argument count", the number of command-line arguments passed to the program when it is executed.
+// char* argv[]: "argument vector", an array of strings (or array of character pointers) containing the command-line arguments themselves. 
 // Each element of this array represents one command-line argument.
 
 {
