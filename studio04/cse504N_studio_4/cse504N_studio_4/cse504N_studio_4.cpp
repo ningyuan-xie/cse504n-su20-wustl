@@ -21,10 +21,12 @@ int main(int argc, char* argv[])
 
 	vector<string> v;
 
+	// store the command line arguments in a vector
 	for (int i = 0; i < argc; i++) {
 		v.push_back(argv[i]);
 	}
 
+	// print the command line arguments
 	for (int i = 0; i < v.size(); i++) {
 		cout << "v = " << v[i] << endl;
 	}
