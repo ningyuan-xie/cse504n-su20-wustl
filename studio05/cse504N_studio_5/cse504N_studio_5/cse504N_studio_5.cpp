@@ -4,7 +4,8 @@
 #include <iostream>
 using namespace std;
 
-void mySwap(int& a, int& b) {
+// static means internal linkage: the function is only visible in the current file
+static void mySwap(int& a, int& b) {
 	int c = a;
 	a = b;
 	b = c;
@@ -21,8 +22,9 @@ int main()
 	int* p_2 = &num_2; // p_2 is a pointer to the location of num_2
 
 	mySwap(num_1, num_2);
-	cout << num_1 << ", " << num_2 << endl; // 2, 1
-	cout << *p_1 << ", " << *p_2 << endl; // Dereference: 2, 1
+
+	cout << "num_1: " << num_1 << ", num_2: " << num_2 << endl; // 2, 1
+	cout << "*p_1: " << *p_1 << ", *p_2: " << *p_2 << endl; // Dereference: 2, 1
 
 	return 0;
 }
