@@ -10,7 +10,7 @@ using namespace std;
 // function 1: return v[i]^2
 int square_element(vector<int> v, unsigned int i)
 {
-	if (i > v.size() - 1)
+	if (i > v.size() - 1)  // in main, v.size() = 3, so i = 3 will throw out_of_range exception
 	{
 		throw out_of_range("Out of Range");
 	}
@@ -40,14 +40,17 @@ int main(int argc, char * argv[])
 	}
 	// try block requires at least one "catch" handler below
 	
-	//catch (out_of_range e){
-		//cout << "1. Error is: " << e.what() << endl; // shows: "1. Error is: Out of Range"
-	//}
+	// handler 1: shows "1. Error is: Out of Range"
+	catch (out_of_range e) {
+		cout << "1. Error is: " << e.what() << endl;
+	}
 	
+	// handler 2: if first catch is comment out, shows: "2. Error is: Divide by zero"
 	// Note 1: the std::out_of_range exception type inherits from std::logic_error, so logic_error goes second
 	catch (logic_error e) {
-		cout << "2. Error is: " << e.what() << endl; // if first catch is comment out, shows: "2. Error is: Out of Range"
+		cout << "2. Error is: " << e.what() << endl;
 	}
+
 
 	// Note 2: if fails to catch the thrown exception, the program crashes!
 }
