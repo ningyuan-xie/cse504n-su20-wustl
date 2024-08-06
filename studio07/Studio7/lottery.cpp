@@ -19,7 +19,7 @@ int main(int argc, char * argv[])
 {
 	// some constants to help with command line parsing
 	const int program_name = 0;
-	const int expected_args = (int)params::USERNUMBERS + 1;
+	const int expected_args = (int)params::USERNUMBERS + 1; // expected_args = 5 + 1 = 6
 	
 	if (argc != expected_args) {
 		usage(argv[program_name]);
@@ -31,9 +31,9 @@ int main(int argc, char * argv[])
 	vector<int> user_numbers;
 	for (int i = 1; i < argc; ++i) {
 		user_numbers.push_back(atoi(argv[i])); // converts the input string to an int or to 0 if the conversion fails
-	} // atoi: string to int
+	} // atoi (ASCII to integer): string to int
 
-	insertion_sort(winning_numbers);
+	insertion_sort(winning_numbers); // sort the winning numbers in ascending order to make binary search work
 
 	unsigned int matches = 0;
 	for (unsigned int i = 0; i < user_numbers.size(); ++i) {

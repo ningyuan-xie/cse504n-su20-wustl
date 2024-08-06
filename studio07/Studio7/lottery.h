@@ -17,6 +17,8 @@ void usage(char * program_name);
 // randomly generates WINNINGNUMBERS numbers from 1-MAXNUMBER
 void generate_winning_numbers(std::vector<int> & v);
 
-// displays the number of matching numbers and results. returns 0 if not a winner (user matched <= half their numbers), 1 if a winner
-// (user matched > half their numbers, but < USERNUMBERS numbers, 2 if usermatched all their numbers
+// displays the number of matching numbers and results:
+// returns 0 if not a winner: user matched <= half their numbers, 
+// returns 1 if a winner: user matched > half their numbers, but < USERNUMBERS numbers, 
+// returns 2 if jackpot: user matched all their numbers
 outcomes print_results(unsigned int matching, std::vector<int> & winning_numbers, std::vector<int> & user_numbers);
