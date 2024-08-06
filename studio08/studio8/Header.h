@@ -16,5 +16,5 @@ private: // member variables
 	int y;
 };
 
-Name byValue(Name);
-Name& byReference(Name&);
+Name byValue(Name); // creates a copy of Name; and returns that copy
+Name& byReference(Name&); // does not create a copy of Name, but operates directly on the original "Name"

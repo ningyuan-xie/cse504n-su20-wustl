@@ -61,7 +61,7 @@ int main()
 
 	Name m; // default construction 
 	cout << "m.x = " << m.getX() << " and m.y = " << m.getY() << endl;
-	m.setX(7).setY(3); // chained use of mutator functions 
+	m.setX(7).setY(3); // chained use of mutator functions because they return a reference to the object
 	cout << "m.x = " << m.getX() << " and m.y = " << m.getY() << endl;
 	Name n(m); // copy construction 
 	cout << "n.x = " << n.getX() << " and n.y = " << n.getY() << endl;

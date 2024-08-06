@@ -10,6 +10,7 @@ Purpose: declarations for lottery functionality such as generating winning numbe
 // the possible outcomes from a single round
 enum struct outcomes { NOTAWINNER, WINNER, JACKPOT, INCORRECTUSAGE = -1 };
 enum struct params { MAXNUMBER = 100, WINNINGNUMBERS = 20, USERNUMBERS = 5 }; // update winning num from 10 to 20 to increase win rates
+
 // called if a user runs the program incorrectly, displays correct usage of the program
 void usage(char * program_name);
 
