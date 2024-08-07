@@ -65,6 +65,8 @@ int main()
 	}
 	cout << endl;
 
+	// In this example, iterators cbegin() and cend() are examples of interface polymorphism
+
 	cout << "-------------------------------------------------------------------" << endl;
 
 
@@ -73,6 +75,9 @@ int main()
 	fli.sort();					// sort forward list
 	li.sort();					// sort list
 	sort(di.begin(), di.end()); // sort double-ended queue
+
+	// In this example, std::sort is an example of interface polymorphism for vector and deque;
+	// sort() member function is another example of interface polymorphism for forward list and list
 
 	cout << "-------------------------------------------------------------------" << endl;
 
@@ -83,6 +88,8 @@ int main()
 	copy(fli.cbegin(), fli.cend(), out); cout << endl;
 	copy(li.cbegin(), li.cend(), out); cout << endl;
 	copy(di.cbegin(), di.cend(), out); cout << endl;
+
+	// In this example, both copy and out are examples of interface polymorphism
 
 }
 
