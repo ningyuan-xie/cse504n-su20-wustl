@@ -30,8 +30,8 @@ int main()
 	}
 
 	// 1.1 Vector of String
-	auto vb = vi.cbegin();
-	cout << "Printing vector of integer (push back): " << endl;
+	auto vb = vi.cbegin(); // vb is an iterator
+	cout << "Printing vector of integer (push back): " << endl; // 0 1 2 6 3 4 5
 	while (vb != vi.cend()) {
 		cout << *vb << " ";
 		vb++;
@@ -39,8 +39,8 @@ int main()
 	cout << endl;
 
 	// 1.2 Forward List
-	auto fb = fli.cbegin();
-	cout << "Printing forward list (push front): " << endl;
+	auto fb = fli.cbegin(); // fb is an iterator
+	cout << "Printing forward list (push front): " << endl; // 0 1 2 6 3 4 5
 	while (fb != fli.cend()) {
 		cout << *fb << " ";
 		fb++;
@@ -48,8 +48,8 @@ int main()
 	cout << endl;
 
 	// 1.3 List
-	auto lb = li.cbegin();
-	cout << "Printing list (push back): " << endl;
+	auto lb = li.cbegin(); // lb is an iterator
+	cout << "Printing list (push back): " << endl; // 0 1 2 6 3 4 5
 	while (lb != li.cend()) {
 		cout << *lb << " ";
 		lb++;
@@ -57,7 +57,7 @@ int main()
 	cout << endl;
 
 	// 1.4 Double-ended Queue
-	auto db = di.cbegin();
+	auto db = di.cbegin(); // db is an iterator
 	cout << "Printing double-ended queue (push back): " << endl;
 	while (db != di.cend()) {
 		cout << *db << " ";
@@ -74,11 +74,12 @@ int main()
 	li.sort();					// sort list
 	sort(di.begin(), di.end()); // sort double-ended queue
 
+	cout << "-------------------------------------------------------------------" << endl;
 
-	// 3. Copy
-	ostream_iterator<int> out(cout, " ");
+	// 3. Copy: out is an iterator supporting output operation regardless of the type of container
+	ostream_iterator<int> out(cout, " | "); // ostream_iterator<T> out(ostream, delimiter);
 	// copy(InputIterator first, InputIterator last, OutputIterator result);
-	copy(vi.cbegin(), vi.cend(), out); cout << endl;
+	copy(vi.cbegin(), vi.cend(), out); cout << endl; // cout will print 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 	copy(fli.cbegin(), fli.cend(), out); cout << endl;
 	copy(li.cbegin(), li.cend(), out); cout << endl;
 	copy(di.cbegin(), di.cend(), out); cout << endl;
