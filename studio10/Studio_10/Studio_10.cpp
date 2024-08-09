@@ -27,6 +27,7 @@ int main(int argc, char* argv[]) // when running, input 1 1 4 5 1 4
 	cout << "1. Multiset: " << endl;
 	cout << "Copying value from argv to multiset: " << endl;
 	copy(&argv[1], &argv[argc], inserter(mst, mst.begin())); // inserter will work on any containers
+	// copy takes range [first, last), so begin at argv[1] and end at argv[argc], where argv[argc] is actually nullptr
 
 	cout << "Printing multiset: " << endl;
 	ostream_iterator<string> o (cout, ", ");
