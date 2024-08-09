@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) // when running, input 1 1 4 5 1 4
 	copy(mst.begin(), mst.end(), inserter(ss, ss.begin())); // inserter will work on any containers
 
 	cout << "Printing set: " << endl;
-	copy(ss.begin(), ss.end(), o); // 1, 4, 5,
+	copy(ss.begin(), ss.end(), o); // No duplicate values: 1, 4, 5,
 	cout << endl;
 
 	cout << "-------------------------------------------------------------------" << endl;
