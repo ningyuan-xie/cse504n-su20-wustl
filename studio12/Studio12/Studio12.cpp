@@ -23,7 +23,7 @@ int main()
 
 	cout << endl << "3. Testing pointers overriding: " << endl;
 	cout << "A pointer to A:" << endl;
-	AptrA->method(); // A's method was called
+	(*AptrA).method(); // A's method was called; (*AptrA).method() = AptrA->method()
 	cout << "A pointer to B:" << endl;
 	AptrB->method(); // Dynamic + Overriding: B's method was called (static: A; dynamic: B)
 	cout << "B pointer to B:" << endl;
