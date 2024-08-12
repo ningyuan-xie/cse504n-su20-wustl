@@ -50,10 +50,10 @@ int main()
 	cout << v[0] << " " << v[1] << " " << v[2] << endl; // 000001EDC9FB5B40 000001EDC9FC7AA0 000001EDC9FC7A40
 	// the same objects are being aliased by two different sets of shared_ptr variables
 
-	// 7. A vector of pointers to detector objects that were dynamically allocated directly using the new operator
+	// 7. A vector of pointers to detector objects that were dynamically allocated directly using the NEW operator
 	cout << endl << "Step 7." << endl;
-	vector<detector*> v1; // detector() 000001EDC9FB3DB0 x = 4
-	v1.push_back(new detector);
+	vector<detector*> v1;
+	v1.push_back(new detector); // detector() 000001EDC9FB3DB0 x = 4
 	cout << v1[0] << endl; // 000001EDC9FB3DB0
 	delete v1[0]; // ~detector() 000001EDC9FB3DB0 x = 4
 	// When I explicitly call delete on the pointer to detector object, the "~detector is called".

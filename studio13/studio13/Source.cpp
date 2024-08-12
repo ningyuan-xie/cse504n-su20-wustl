@@ -4,7 +4,7 @@
 using namespace std;
 
 // 2. Define a detector class
-detector::detector() : x(y) // a public default constructor; int x initialized = 0
+detector::detector() : x(y) // a public default constructor; int x initialized = y = 0
 {
 	++y; // everytime a new detector is constructed, x will increase by 1 through x(y)
 	cout << "detector() " << this << " x = " << x << endl;
