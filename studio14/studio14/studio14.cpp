@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 	// wrapper() 000000F6992FF678 p_d = 0000020BD43439F0
 
 	cout << endl << "Construct wrapper w2 using copy constructor: " << endl;
-	wrapper w2(w);
+	wrapper w2(w); // similar to wrapper w2 = w; which are the same for machine code
 	// detector() 0000020BD4343B30 x = 1
 	// wrapper() 000000F6992FF6A8 p_d = 0000020BD4343B30
 

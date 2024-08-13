@@ -19,6 +19,6 @@ public:
 
 private:
 	detector* p_d; // a private member variable that is a pointer to an object of the detector class type
-	bool b_m_v; // a Boolean member variable, only needed for shallow copy
+	bool b_m_v; // a Boolean member variable, only used by default constructor
 
 };
