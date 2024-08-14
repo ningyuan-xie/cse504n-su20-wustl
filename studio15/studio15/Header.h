@@ -19,7 +19,7 @@ public:
 	wrapper(); // default constructor
 	~wrapper(); // destructor
 	
-	wrapper(const wrapper& p); // copy constructor
+	wrapper(const wrapper& p); // Copy constructor
 	wrapper& operator= (const wrapper& p); // Copy-Assignment operator=
 
 	wrapper(wrapper&& p); // Move constructor 
