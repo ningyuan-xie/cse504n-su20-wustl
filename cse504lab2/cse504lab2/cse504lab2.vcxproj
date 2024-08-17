@@ -160,6 +160,7 @@
     <ClInclude Include="game_pieces.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="gomoku.txt" />
     <Text Include="ReadMe.txt" />
     <Text Include="tic-tac-toe.txt" />
   </ItemGroup>

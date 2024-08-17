@@ -48,5 +48,6 @@
   <ItemGroup>
     <Text Include="ReadMe.txt" />
     <Text Include="tic-tac-toe.txt" />
+    <Text Include="gomoku.txt" />
   </ItemGroup>
 </Project>
