@@ -89,7 +89,7 @@ int main(int argc, char* argv[])
 		return no_file_name_given;
 	}
 
-	// Step 11.3: declare a vector of C++ stype strings of type vector<string>
+	// Step 11.3: declare a vector of C++ stype strings of type vector<string> as parameter for parsing function
 	vector<string> vector_of_string;
 
 	// and pass that vector and the first program argument to the function that parses the input file
@@ -97,7 +97,7 @@ int main(int argc, char* argv[])
 		return file_open_failed;
 	} // parsing_function will run once in the if-statement, so by this point "vector_of_string" is already filled
 	
-	// Step 11.4: declare a vector of integers of type vector<int>
+	// Step 11.4: declare a vector of integers of type vector<int> to store the integers that are extracted from the strings
 	vector<int> vector_of_int;
 	
 	// iterate through the vector of strings

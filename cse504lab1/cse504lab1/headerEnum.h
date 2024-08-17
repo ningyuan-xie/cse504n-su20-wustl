@@ -2,7 +2,7 @@
 // header file can be used to separate functions in the source file
 
 // Step 7. Declare enumerations
-namespace two_enum { // use "namespace" to: 1. organize code 2. prevent name clashes 3. Scoping
+namespace two_enum { // use "namespace" to: 1. organize code 2. prevent name clashes 3. scoping
 
 	// different array indices
 	enum enumeration_1 {program_name = 0, input_file_name = 1, expected_number_of_command_line_arguments = 2};
