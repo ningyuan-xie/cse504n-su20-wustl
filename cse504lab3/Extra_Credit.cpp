@@ -39,47 +39,47 @@ int tictactoe_game::auto_player() {
 			if ((v_3[1] == "X" && v_3[3] == "X") || (v_3[1] == "X" && v_2[3] == "X") || (v_3[3] == "X" && v_2[1] == "X")) {
 				v_3[2] = "O"; // 1.1 Block the upper
 			}
-			if ((v_1[1] == "X" && v_1[3] == "X") || (v_1[1] == "X" && v_2[3] == "X") || (v_1[3] == "X" && v_2[1] == "X")) {
+			else if ((v_1[1] == "X" && v_1[3] == "X") || (v_1[1] == "X" && v_2[3] == "X") || (v_1[3] == "X" && v_2[1] == "X")) {
 				v_1[2] = "O"; // 1.2 Block the lower
 			}
-			if ((v_1[1] == "X" && v_3[1] == "X") || (v_3[1] == "X" && v_1[2] == "X") || (v_1[1] == "X" && v_3[2] == "X") || (v_1[3] == "X" && v_3[1] == "X")) {
+			else if ((v_1[1] == "X" && v_3[1] == "X") || (v_3[1] == "X" && v_1[2] == "X") || (v_1[1] == "X" && v_3[2] == "X") || (v_1[3] == "X" && v_3[1] == "X")) {
 				v_2[1] = "O"; // 1.3 Block the left
 			}
-			if ((v_1[3] == "X" && v_3[3] == "X") || (v_1[3] == "X" && v_3[2] == "X") || (v_1[2] == "X" && v_3[3] == "X") || (v_1[1] == "X" && v_3[3] == "X")) {
+			else if ((v_1[3] == "X" && v_3[3] == "X") || (v_1[3] == "X" && v_3[2] == "X") || (v_1[2] == "X" && v_3[3] == "X") || (v_1[1] == "X" && v_3[3] == "X")) {
 				v_2[3] = "O"; // 1.4 Block the right
 			}
-			if ((v_3[1] == "X" && v_3[2] == "X") || (v_1[3] == "X" && v_2[3] == "X") || (v_2[3] == "X" && v_3[2] == "X")) {
+			else if ((v_3[1] == "X" && v_3[2] == "X") || (v_1[3] == "X" && v_2[3] == "X") || (v_2[3] == "X" && v_3[2] == "X")) {
 				v_3[3] = "O"; // 1.5 Block the upper right
 			}
-			if ((v_3[2] == "X" && v_3[3] == "X") || (v_1[1] == "X" && v_2[1] == "X") || (v_2[1] == "X" && v_3[2] == "X") || (v_1[2] == "X" && v_3[2] == "X")) {
+			else if ((v_3[2] == "X" && v_3[3] == "X") || (v_1[1] == "X" && v_2[1] == "X") || (v_2[1] == "X" && v_3[2] == "X") || (v_1[2] == "X" && v_3[2] == "X")) {
 				v_3[1] = "O"; // 1.6 Block the upper left
 			}
-			if ((v_2[1] == "X" && v_3[1] == "X") || (v_1[2] == "X" && v_1[3] == "X") || (v_1[2] == "X" && v_2[1] == "X") || (v_2[1] == "X" && v_2[3] == "X")) {
+			else if ((v_2[1] == "X" && v_3[1] == "X") || (v_1[2] == "X" && v_1[3] == "X") || (v_1[2] == "X" && v_2[1] == "X") || (v_2[1] == "X" && v_2[3] == "X")) {
 				v_1[1] = "O"; // 1.7 Block the lower left
 			}
-			if ((v_1[1] == "X" && v_1[2] == "X") || (v_3[3] == "X" && v_2[3] == "X") || (v_1[2] == "X" && v_2[3] == "X")) {
+			else if ((v_1[1] == "X" && v_1[2] == "X") || (v_3[3] == "X" && v_2[3] == "X") || (v_1[2] == "X" && v_2[3] == "X")) {
 				v_1[3] = "O"; // 1.8 Block the lower right
 			}
 
 		}
 
-		if (v_1[1] == "O") { // 2. If "O" has taken the lower-left corner ("X" has taken center in 1st step), there are 7 situations:
+		else if (v_1[1] == "O") { // 2. If "O" has taken the lower-left corner ("X" has taken center in 1st step), there are 7 situations:
 			if (v_3[1] == "X") {
 				v_1[3] = "O"; // 2.1 Block the lower right
 			}
-			if (v_3[2] == "X") {
+			else if (v_3[2] == "X") {
 				v_1[2] = "O"; // 2.2 Block the lower
 			}
-			if (v_2[1] == "X") {
+			else if (v_2[1] == "X") {
 				v_2[3] = "O"; // 2.3 Block the right
 			}
-			if (v_2[3] == "X" || v_3[3] == "X") { // does not need to block X's triple here 
+			else if (v_2[3] == "X" || v_3[3] == "X") { // does not need to block X's triple here 
 				v_2[1] = "O"; // 2.4 Block the left
 			}
-			if (v_1[3] == "X") {
+			else if (v_1[3] == "X") {
 				v_3[1] = "O"; // 2.5 Block the upper
 			}
-			if (v_1[2] == "X") {
+			else if (v_1[2] == "X") {
 				v_3[2] = "O"; // 2.6 Block the upper left
 			}
 		}
@@ -325,19 +325,19 @@ int tictactoe_game::auto_player() {
 			}
 		}
 
-		if (v_1[1] == "O") { // 2. If "O" has taken the lower-left corner ("X" has taken center in 1st step):
+		else if (v_1[1] == "O") { // 2. If "O" has taken the lower-left corner ("X" has taken center in 1st step):
 
 			// Check if "O" can triple first: there are 4 situations
 			if (v_1[3] == "O" && v_1[2] == " ") {
 				v_1[2] = "O"; // form a triple
 			}
-			if (v_1[2] == "O" && v_1[3] == " ") {
+			else if (v_1[2] == "O" && v_1[3] == " ") {
 				v_1[3] = "O"; // form a triple
 			}
-			if (v_3[1] == "O" && v_2[1] == " ") {
+			else if (v_3[1] == "O" && v_2[1] == " ") {
 				v_2[1] = "O"; // form a triple
 			}
-			if (v_2[1] == "O" && v_3[1] == " ") {
+			else if (v_2[1] == "O" && v_3[1] == " ") {
 				v_3[1] = "O"; // form a triple
 			}
 
@@ -356,16 +356,16 @@ int tictactoe_game::auto_player() {
 				if (v_3[1] == "X") {
 					v_1[3] = "O"; // 2.3.1 Block the lower right
 				}
-				if (v_3[2] == "X") {
+				else if (v_3[2] == "X") {
 					v_1[2] = "O"; // 2.3.2 Block the lower
 				}
-				if (v_3[3] == "X") {
+				else if (v_3[3] == "X") {
 					v_3[1] = "O"; // 2.3.3 Block the upper left
 				}
-				if (v_1[2] == "X") {
+				else if (v_1[2] == "X") {
 					v_3[2] = "O"; // 2.3.4 Block the upper
 				}
-				if (v_1[3] == "X") {
+				else if (v_1[3] == "X") {
 					v_3[1] = "O"; // 2.3.5 Block the upper left
 				}
 			}
@@ -383,16 +383,16 @@ int tictactoe_game::auto_player() {
 				if (v_3[1] == "X") {
 					v_1[3] = "O"; // 2.6.1 Block the lower right
 				}
-				if (v_3[3] == "X") {
+				else if (v_3[3] == "X") {
 					v_3[1] = "O"; // 2.6.2 Block the upper left
 				}
-				if (v_2[1] == "X") {
+				else if (v_2[1] == "X") {
 					v_2[3] = "O"; // 2.6.3 Block the right
 				}
-				if (v_2[3] == "X") {
+				else if (v_2[3] == "X") {
 					v_2[1] = "O"; // 2.6.4 Block the left
 				}
-				if (v_1[3] == "X") {
+				else if (v_1[3] == "X") {
 					v_3[1] = "O"; // 2.6.5 Block the upper left
 				}
 			}
@@ -640,7 +640,7 @@ int tictactoe_game::auto_player() {
 			}
 		}
 
-		if (v_1[1] == "O") { // 2. If "O" has taken the lower-left corner ("X" has taken center in 1st step):
+		else if (v_1[1] == "O") { // 2. If "O" has taken the lower-left corner ("X" has taken center in 1st step):
 
 			if (v_3[1] == "X" && v_3[2] == "O" && v_1[2] == "X" && v_1[3] == "O") { // 2.1.1
 				if ((v_3[3] == "X") || (v_2[3] == "X")) {
@@ -650,7 +650,7 @@ int tictactoe_game::auto_player() {
 					v_2[3] = "O"; // 2.1.1.2
 				}
 			}
-			if (v_3[1] == "O" && v_3[2] == "X" && v_1[2] == "O" && v_1[3] == "X") { // 2.2.1
+			else if (v_3[1] == "O" && v_3[2] == "X" && v_1[2] == "O" && v_1[3] == "X") { // 2.2.1
 				if ((v_3[3] == "X") || (v_2[3] == "X")) {
 					v_2[1] = "O"; // 2.2.1.1 & 2.2.1.3
 				}
@@ -658,7 +658,7 @@ int tictactoe_game::auto_player() {
 					v_2[3] = "O"; // 2.2.1.2
 				}
 			}
-			if (v_3[1] == "X" && v_2[1] == "X" && v_2[3] == "O" && v_1[3] == "O") { // 2.3.1
+			else if (v_3[1] == "X" && v_2[1] == "X" && v_2[3] == "O" && v_1[3] == "O") { // 2.3.1
 				if (v_3[2] == "X") {
 					v_3[3] = "O"; // 2.3.1.1
 				}
@@ -669,7 +669,7 @@ int tictactoe_game::auto_player() {
 					v_3[3] = "O"; // 2.3.1.3
 				}
 			}
-			if (v_3[2] == "X" && v_2[1] == "X" && v_1[2] == "O" && v_2[3] == "O") { // 2.3.2
+			else if (v_3[2] == "X" && v_2[1] == "X" && v_1[2] == "O" && v_2[3] == "O") { // 2.3.2
 				if (v_3[1] == "X") {
 					v_3[3] = "O"; // 2.3.2.1
 				}
@@ -680,7 +680,7 @@ int tictactoe_game::auto_player() {
 					v_3[1] = "O"; // 2.3.2.3
 				}
 			}
-			if (v_3[1] == "O" && v_2[1] == "X" && v_3[3] == "X" && v_2[3] == "O") { // 2.3.3
+			else if (v_3[1] == "O" && v_2[1] == "X" && v_3[3] == "X" && v_2[3] == "O") { // 2.3.3
 				if (v_3[2] == "X") {
 					v_1[2] = "O"; // 2.3.3.1
 				}
@@ -691,7 +691,7 @@ int tictactoe_game::auto_player() {
 					v_3[2] = "O"; // 2.3.3.3
 				}
 			}
-			if (v_2[1] == "X" && v_3[2] == "O" && v_1[2] == "X" && v_2[3] == "O") { // 2.3.4
+			else if (v_2[1] == "X" && v_3[2] == "O" && v_1[2] == "X" && v_2[3] == "O") { // 2.3.4
 				if (v_3[1] == "X") {
 					v_1[3] = "O"; // 2.3.4.1
 				}
@@ -702,7 +702,7 @@ int tictactoe_game::auto_player() {
 					v_3[1] = "O"; // 2.3.4.3
 				}
 			}
-			if (v_3[1] == "O" && v_2[1] == "X" && v_2[3] == "O" && v_1[3] == "X") { // 2.3.5
+			else if (v_3[1] == "O" && v_2[1] == "X" && v_2[3] == "O" && v_1[3] == "X") { // 2.3.5
 				if (v_3[2] == "X") {
 					v_1[2] = "O"; // 2.3.5.1
 				}
@@ -713,7 +713,7 @@ int tictactoe_game::auto_player() {
 					v_3[2] = "O"; // 2.3.5.3
 				}
 			}
-			if (v_3[1] == "X" && v_2[1] == "O" && v_3[3] == "X" && v_1[3] == "O") { // 2.4.1
+			else if (v_3[1] == "X" && v_2[1] == "O" && v_3[3] == "X" && v_1[3] == "O") { // 2.4.1
 				if (v_2[3] == "X") {
 					v_1[2] = "O"; // 2.4.1.1
 				}
@@ -721,7 +721,7 @@ int tictactoe_game::auto_player() {
 					v_3[2] = "O"; // 2.4.1.2
 				}
 			}
-			if (v_3[1] == "X" && v_2[1] == "O" && v_2[3] == "X" && v_1[3] == "O") { // 2.4.2
+			else if (v_3[1] == "X" && v_2[1] == "O" && v_2[3] == "X" && v_1[3] == "O") { // 2.4.2
 				if (v_3[2] == "X") {
 					v_3[3] = "O"; // 2.4.2.1
 				}
@@ -732,7 +732,7 @@ int tictactoe_game::auto_player() {
 					v_3[2] = "O"; // 2.4.2.3
 				}
 			}
-			if (v_3[1] == "O" && v_2[1] == "X" && v_2[3] == "O" && v_1[3] == "X") { // 2.5.1
+			else if (v_3[1] == "O" && v_2[1] == "X" && v_2[3] == "O" && v_1[3] == "X") { // 2.5.1
 				if (v_3[2] == "X") {
 					v_1[2] = "O"; // 2.5.1.1
 				}
@@ -743,7 +743,7 @@ int tictactoe_game::auto_player() {
 					v_3[2] = "O"; // 2.5.1.3
 				}
 			}
-			if (v_3[1] == "X" && v_3[2] == "O" && v_1[2] == "X" && v_1[3] == "O") { // 2.6.1
+			else if (v_3[1] == "X" && v_3[2] == "O" && v_1[2] == "X" && v_1[3] == "O") { // 2.6.1
 				if (v_3[3] == "X") {
 					v_2[1] = "O"; // 2.6.1.1
 				}
@@ -754,7 +754,7 @@ int tictactoe_game::auto_player() {
 					v_2[1] = "O"; // 2.6.1.3
 				}
 			}
-			if (v_3[1] == "O" && v_3[2] == "O" && v_3[3] == "X" && v_1[2] == "X") { // 2.6.2
+			else if (v_3[1] == "O" && v_3[2] == "O" && v_3[3] == "X" && v_1[2] == "X") { // 2.6.2
 				if (v_2[1] == "X") {
 					v_2[3] = "O"; // 2.6.2.1
 				}
@@ -765,7 +765,7 @@ int tictactoe_game::auto_player() {
 					v_2[1] = "O"; // 2.6.2.3
 				}
 			}
-			if (v_3[2] == "O" && v_2[1] == "X" && v_1[2] == "X" && v_2[3] == "O") { // 2.6.3
+			else if (v_3[2] == "O" && v_2[1] == "X" && v_1[2] == "X" && v_2[3] == "O") { // 2.6.3
 				if (v_3[1] == "X") {
 					v_1[3] = "O"; // 2.6.3.1
 				}
@@ -776,7 +776,7 @@ int tictactoe_game::auto_player() {
 					v_3[1] = "O"; // 2.6.3.3
 				}
 			}
-			if (v_3[2] == "O" && v_2[1] == "O" && v_1[2] == "X" && v_2[3] == "X") { // 2.6.4
+			else if (v_3[2] == "O" && v_2[1] == "O" && v_1[2] == "X" && v_2[3] == "X") { // 2.6.4
 				if (v_3[1] == "X") {
 					v_1[3] = "O"; // 2.6.4.1
 				}
@@ -787,7 +787,7 @@ int tictactoe_game::auto_player() {
 					v_3[1] = "O"; // 2.6.4.3
 				}
 			}
-			if (v_3[1] == "O" && v_3[2] == "O" && v_1[2] == "X" && v_1[3] == "X") { // 2.6.5
+			else if (v_3[1] == "O" && v_3[2] == "O" && v_1[2] == "X" && v_1[3] == "X") { // 2.6.5
 				if (v_3[3] == "X") {
 					v_2[1] = "O"; // 2.6.5.1
 				}
@@ -896,7 +896,7 @@ int tictactoe_game::turn_auto() {
 // Step 6.9 Define a public non-static play() method
 int tictactoe_game::play_auto() {
 
-	int play_result = this->turn_auto(); // In this step, turn() method will repeately call done() method and draw() method  
+	int play_result = this->turn_auto(); // In this step, turn_auto() method will repeately call done() method and draw() method  
 
 	// Situation (3)
 	if (play_result == turn_enum::TURN_QUIT) {
